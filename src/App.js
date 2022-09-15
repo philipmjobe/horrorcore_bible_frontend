@@ -17,7 +17,10 @@ export default class Artist extends React.Component {
     return (
       <ul>
         {this.state.artists.map((artist) => (
-          <li key={artist.id}>{artist.name}</li>
+          <>
+            <li key={artist.id}>{artist.name}</li>
+            <img src={artist.image} alt="artist" />
+          </>
         ))}
       </ul>
     );

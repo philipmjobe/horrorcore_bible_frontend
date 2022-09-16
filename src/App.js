@@ -54,7 +54,7 @@ export default class Artist extends React.Component {
               .sort((a, b) => a.name.localeCompare(b.name))
               .map((artist) => (
                 <Col>
-                  <Card border="dark" style={{ width: "27.95rem" }}>
+                  <Card border="dark" style={{ width: "27.95rem", backgroundColor: "black" }}>
                     <Card.Img
                       variant="top"
                       src={artist.image}
@@ -63,7 +63,7 @@ export default class Artist extends React.Component {
                       style={{ height: 400, width: 445 }}
                     />
                     <Card.Body>
-                      <Card.Title style={{ textAlign: "center" }}>{artist.name}</Card.Title>
+                      <Card.Title style={{ textAlign: "center", color: "white" }}>{artist.name}</Card.Title>
                     </Card.Body>
                   </Card>
                 </Col>

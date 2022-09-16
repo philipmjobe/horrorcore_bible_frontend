@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -8,6 +9,7 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import "./App.css";
 import axios from "axios";
+import Show from "./ArtistShow";
 
 export default class Artist extends React.Component {
   state = {
@@ -30,7 +32,7 @@ export default class Artist extends React.Component {
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                  <Nav.Link href="#features">Features</Nav.Link>
+                  <Nav.Link href="/show">Show</Nav.Link>
                   <Nav.Link href="#pricing">Pricing</Nav.Link>
                   <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

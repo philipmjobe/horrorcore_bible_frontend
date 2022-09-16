@@ -23,51 +23,53 @@ export default class Artist extends React.Component {
   render() {
     return (
       <>
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-          <Container>
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="#features">Features</Nav.Link>
-                <Nav.Link href="#pricing">Pricing</Nav.Link>
-                <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-              <Nav>
-                <Nav.Link href="#deets">More deets</Nav.Link>
-                <Nav.Link eventKey={2} href="#memes">
-                  Dank memes
-                </Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-        <Row xs={1} md={3} className="g-4">
-          {this.state.artists
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .map((artist) => (
-              <Col>
-                <Card>
-                  <Card.Img
-                    variant="top"
-                    src={artist.image}
-                    alt="artist"
-                    className="image"
-                    style={{ height: 400, width: 445 }}
-                  />
-                  <Card.Body>
-                    <Card.Title style={{ textAlign: "center" }}>{artist.name}</Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-        </Row>
+        <div style={{ backgroundColor: "#BA1313" }}>
+          <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Container>
+              <Navbar.Brand href="#home">The Horrorcore Bible</Navbar.Brand>
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="me-auto">
+                  <Nav.Link href="#features">Features</Nav.Link>
+                  <Nav.Link href="#pricing">Pricing</Nav.Link>
+                  <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                  </NavDropdown>
+                </Nav>
+                <Nav>
+                  <Nav.Link href="#deets">More deets</Nav.Link>
+                  <Nav.Link eventKey={2} href="#memes">
+                    Dank memes
+                  </Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
+            </Container>
+          </Navbar>
+          <Row xs={1} md={3} className="g-4">
+            {this.state.artists
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map((artist) => (
+                <Col>
+                  <Card border="dark" style={{ width: "27.95rem" }}>
+                    <Card.Img
+                      variant="top"
+                      src={artist.image}
+                      alt="artist"
+                      className="image"
+                      style={{ height: 400, width: 445 }}
+                    />
+                    <Card.Body>
+                      <Card.Title style={{ textAlign: "center" }}>{artist.name}</Card.Title>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+          </Row>
+        </div>
       </>
     );
   }

@@ -30,7 +30,7 @@ export default class Artist extends React.Component {
                 style={{ height: 400, width: 445 }}
               />
               <Card.Body>
-                <Card.Title>{artist.name}</Card.Title>
+                <Card.Title style={{ textAlign: "center" }}>{artist.name}</Card.Title>
               </Card.Body>
             </Card>
           </Col>

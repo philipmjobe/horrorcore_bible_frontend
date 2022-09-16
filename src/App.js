@@ -22,13 +22,15 @@ export default class Artist extends React.Component {
         {this.state.artists.map((artist) => (
           <Col>
             <Card>
-              <Card.Img variant="top" src="holder.js/100px160" />
+              <Card.Img
+                variant="top"
+                src={artist.image}
+                alt="artist"
+                className="image"
+                style={{ height: 400, width: 400 }}
+              />
               <Card.Body>
-                <Card.Title>Card title</Card.Title>
-                <Card.Text>
-                  This is a longer card with supporting text below as a natural lead-in to additional content. This
-                  content is a little bit longer.
-                </Card.Text>
+                <Card.Title>{artist.name}</Card.Title>
               </Card.Body>
             </Card>
           </Col>
@@ -37,11 +39,3 @@ export default class Artist extends React.Component {
     );
   }
 }
-
-{
-  /* <>
-  <li key={artist.id}>{artist.name}</li>
-  <img src={artist.image} alt="artist" className="image" style={{ height: 400, width: 400 }} />
-</>; */
-}
-// export default Artist;

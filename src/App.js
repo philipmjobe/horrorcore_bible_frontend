@@ -18,7 +18,7 @@ export default class Artist extends React.Component {
 
   render() {
     return (
-      <Row xs={1} md={2} className="g-4">
+      <Row xs={1} md={3} className="g-4">
         {this.state.artists.map((artist) => (
           <Col>
             <Card>
@@ -27,7 +27,7 @@ export default class Artist extends React.Component {
                 src={artist.image}
                 alt="artist"
                 className="image"
-                style={{ height: 400, width: 400 }}
+                style={{ height: 400, width: 445 }}
               />
               <Card.Body>
                 <Card.Title>{artist.name}</Card.Title>

@@ -8,8 +8,8 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 import axios from "axios";
-import ArtistShow from "./pages/artistShow";
 
 export default class Artist extends React.Component {
   state = {
@@ -56,7 +56,7 @@ export default class Artist extends React.Component {
               .sort((a, b) => a.name.localeCompare(b.name))
               .map((artist) => (
                 <Col>
-                  <Card border="dark" style={{ width: "27.95rem", backgroundColor: "black" }}>
+                  <Card className="text-center" border="dark" style={{ width: "27.95rem", backgroundColor: "black" }}>
                     <Card.Img
                       variant="top"
                       src={artist.image}
@@ -66,6 +66,9 @@ export default class Artist extends React.Component {
                     />
                     <Card.Body>
                       <Card.Title style={{ textAlign: "center", color: "white" }}>{artist.name}</Card.Title>
+                      <Button variant="danger" style={{ align: "center" }}>
+                        More Info
+                      </Button>
                     </Card.Body>
                   </Card>
                 </Col>

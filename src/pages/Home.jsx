@@ -1,11 +1,10 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
 import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
+
 
 export default class Artist extends React.Component {
   state = {
@@ -20,7 +19,8 @@ export default class Artist extends React.Component {
 
   render() {
     return (
-      <>
+      
+      <div className="home">
         <div style={{ backgroundColor: "#BA1313" }}>
           <Row xs={1} md={3} className="g-4">
             {this.state.artists
@@ -46,7 +46,9 @@ export default class Artist extends React.Component {
               ))}
           </Row>
         </div>
-      </>
+      </div>
     );
   }
+  
 }
+
